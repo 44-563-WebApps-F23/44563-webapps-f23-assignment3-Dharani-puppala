@@ -38,6 +38,59 @@
         </li>
         </ul>
         <a href="mystats.html">rendered to mystatus</a>
+        <hr>
+        <h3>Sports</h3>
+        <p>sports can improve Sleep,make Heart strong,Reduces Stress,Improves Lung Function.</p>
+        <table border="4">
+            <tr>
+            <th> Name of the sport</th>
+            <th> reasons</th>
+            <th>Hours spent</th>
+            </tr>
+            <tr>
+            <td> Kabadi </td>
+            <td> It helps in toning the muscles of the legs, hands and body.It makes us flexible. </td>
+            <td>4 hours </td>
+             </tr>
+            <tr>
+            <td>Swimming</td>
+            <td>providing good low-impact therapy for some injuries and conditions. providing a pleasant way to cool down on a hot day.</td>
+            <td>4 hours</td>
+            </tr>
+            <tr>
+                <td>Tennis </td>
+                <td>increasing aerobic capacities.increasing aerobic capacities. </td>
+                <td> 4 hours</td>
+            </tr>
+            <tr>
+                <td>Cycling</td>
+                <td>decreased stress levels. improved posture and coordination.strengthened bones.</td>
+                <td> 4 hours</td>
+            </tr>
+        </table>
+            <hr></hr>
+            <h3>code</h3>
+            <blockquote>Find first image from post content with wordpress</blockquote>
+            <a href="https://stackoverflow.com/questions/47904525/find-first-image-from-post-content-with-wordpress">link</a>
+            <pre>
+
+                function catch_that_image() {
+                    global $post, $posts;
+                    $first_img = '';
+                    ob_start();
+                    ob_end_clean();
+                    $output = preg_match_all('/<img.+?src=[\'"]([^\'"]+)[\'"].*?>/i', $post->post_content, $matches);
+                    $first_img = $matches[1][0];
+                  
+                    if(empty($first_img)) {
+                      $first_img = "/path/to/default.png";
+                    }
+                    return $first_img;
+                  }
+
+            </pre>
+
+            
 </body>
 
 </html>
